@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Configuration;
+using System.Collections.Generic; 
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -1427,7 +1426,7 @@ namespace NHibernate.Cfg
 		/// </remarks>
 		public Configuration Configure()
 		{
-			var hc = ConfigurationManager.GetSection(CfgXmlHelper.CfgSectionName) as IHibernateConfiguration;
+			var hc = new object();//repl: ConfigurationManager.GetSection(CfgXmlHelper.CfgSectionName) as IHibernateConfiguration;
 			if (hc != null && hc.SessionFactory != null)
 			{
 				return DoConfigure(hc.SessionFactory);

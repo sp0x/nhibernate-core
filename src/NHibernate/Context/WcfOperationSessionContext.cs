@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using System.ServiceModel;
+//using System.ServiceModel;
 
 using NHibernate.Engine;
 

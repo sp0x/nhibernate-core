@@ -1,5 +1,4 @@
-using System;
-using System.Configuration;
+using System; 
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
@@ -78,7 +77,7 @@ namespace NHibernate
 
 		private static string GetNhibernateLoggerClass()
 		{
-			var nhibernateLogger = ConfigurationManager.AppSettings.Keys.Cast<string>().FirstOrDefault(k => NhibernateLoggerConfKey.Equals(k.ToLowerInvariant()));
+			var nhibernateLogger = ""; //repl: ConfigurationManager.AppSettings.Keys.Cast<string>().FirstOrDefault(k => NhibernateLoggerConfKey.Equals(k.ToLowerInvariant()));
 			string nhibernateLoggerClass = null;
 			if (string.IsNullOrEmpty(nhibernateLogger))
 			{
@@ -95,7 +94,7 @@ namespace NHibernate
 			}
 			else
 			{
-				nhibernateLoggerClass = ConfigurationManager.AppSettings[nhibernateLogger];
+				//repl: nhibernateLoggerClass = ConfigurationManager.AppSettings[nhibernateLogger];
 			}
 			return nhibernateLoggerClass;
 		}

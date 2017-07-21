@@ -1,6 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Configuration;
+using System.Collections.Generic; 
 using System.Reflection;
 
 using NHibernate.Bytecode;
@@ -224,7 +223,7 @@ namespace NHibernate.Cfg
 
 		private static void LoadGlobalPropertiesFromAppConfig()
 		{
-			object config = ConfigurationManager.GetSection(CfgXmlHelper.CfgSectionName);
+			object config = null; //repl: ConfigurationManager.GetSection(CfgXmlHelper.CfgSectionName);
 
 			if (config == null)
 			{
